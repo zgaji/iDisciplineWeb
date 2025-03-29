@@ -1,6 +1,9 @@
 from django.urls import path
-from . import views
+from .views import user_login, user_logout, home  # Import your home view if needed
 
 urlpatterns = [
-    path("", views.home, name="home")
+    path("", home, name="home"),  # Home page
+    path("login/", user_login, name="login"),
+    path("logout/", user_logout, name="logout"),
 ]
+
